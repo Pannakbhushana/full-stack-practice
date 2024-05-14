@@ -1,0 +1,32 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(252, 251, 251);
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 80px;
+}
+
+.active{
+    color: red;
+    text-decoration: none;
+}
+
+.default{
+    color: green;
+    text-decoration: none;
+}
+
+.formContainer{
+    padding: 20px;
+    border-radius: 5%;
+    /* width: 30%; */
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.inputBox{
+    border-radius: 5px;
+    width: 400px;
+    height: 30px;
+}
