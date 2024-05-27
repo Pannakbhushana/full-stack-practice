@@ -1,0 +1,103 @@
+#container {
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  border: 1px solid black;
+  /* write you css here for grid and default pattern of div's */
+  gap: 20px;
+  background-color: rgb(255, 253, 248);
+  display: grid;
+  grid-template-areas:
+    "b1 b2 b3"
+    "b4 b5 b5";
+  gap: 20px;
+  background-color: rgb(255, 253, 248);
+}
+#container > div {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid black;
+  background-size: cover;
+  background-position: center;
+  
+}
+#container > div {
+  /* write the code here */
+  border: 1px solid black;
+  
+}
+
+
+#box {
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+/* write the code header for assigning background images and cover*/
+#b1 { grid-area: b1; background-image: url('https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*'); }
+#b2 { grid-area: b2; background-image: url('https://cdn-prod.medicalnewstoday.com/content/images/articles/322/322868/golden-retriever-puppy.jpg'); }
+#b3 { grid-area: b3; background-image: url('https://www.cdc.gov/healthypets/images/pets/cute-dog-headshot.jpg?_=42445'); }
+#b4 { grid-area: b4; background-image: url('https://hips.hearstapps.com/ghk.h-cdn.co/assets/16/08/gettyimages-530330473.jpg?crop=0.659xw:0.990xh;0.123xw,0.00779xh&resize=980:*'); }
+#b5 { grid-area: b5; background-image: url('https://image.petmd.com/files/styles/978x550/public/dog-allergies.jpg'); }
+
+
+/* write media queries */
+@media (max-width: 900px) {
+  #container {
+    grid-template-areas:
+      "b5 b2 b3 b1"
+      "b4 b4  . b1";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+  #b4 {
+    grid-area: b4;
+    height: 100%; 
+  }
+  #b5 {
+    grid-area: b5;
+    height: auto;
+  }
+  #container > div {
+    height: auto; 
+  }
+}
+
+
+@media (max-width: 470px) {
+  #container {
+    grid-template-areas:
+      "b5 b2 b3 b1"
+      "b4  . .  b1";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+  }
+  #b4 {
+    grid-area: b4;
+    height: 100%; 
+  }
+  #b5 {
+    grid-area: b5;
+    height: auto;
+  }
+  #container > div {
+    height: auto; 
+  }
+}
+
+@media (max-width: 350px) {
+  #container {
+    grid-template-areas:
+      "b1"
+      "b2"
+      "b3"
+      "b4"
+      "b5";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+  #container > div {
+    height: auto; /* Adjust height for smaller screens */
+    width: 100%; /* Ensure div takes full width */
+  }
+}
